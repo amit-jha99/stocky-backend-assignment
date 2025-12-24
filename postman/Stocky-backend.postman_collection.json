@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "5a4bdd6d-ed87-4694-a373-7f8ece46c16b",
+		"name": "Stocky-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23665947",
+		"_collection_link": "https://galactic-astronaut-120387.postman.co/workspace/stocky-backend-assignment~1867e767-c9cf-4605-ba4b-36743f6ffc65/collection/23665947-5a4bdd6d-ed87-4694-a373-7f8ece46c16b?action=share&source=collection_link&creator=23665947"
+	},
+	"item": [
+		{
+			"name": "Create Reward (POST /reward)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user_id\": \"user_1812\",\r\n  \"stock_symbol\": \"INFY\",\r\n  \"quantity\": 1.25,\r\n  \"rewarded_at\": \"2025-12-24T10:00:00Z\",\r\n  \"idempotency_key\": \"reward-004\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/reward",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reward"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Today Stocks (GET /today-stocks/{userId})",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/today-stocks/user_1812",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"today-stocks",
+						"user_1812"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Historical INR (GET /historical-inr/{userId})",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/historical-inr/user_1812",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"historical-inr",
+						"user_1812"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Portfolio Stats (GET /stats/{userId})",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/stats/user_1812",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stats",
+						"user_1812"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Portfolio Details (GET /portfolio/{userId})",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/portfolio/user_1812",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"portfolio",
+						"user_1812"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
