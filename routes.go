@@ -7,5 +7,5 @@ func registerRoutes(r *gin.Engine) {
     r.GET("/today-stocks/:userId", todayStocksHandler)
     r.GET("/historical-inr/:userId", historicalINRHandler)
     r.GET("/stats/:userId", statsHandler)
-    r.GET("/portfolio/:userId", portfolioHandler) // bonus
+    r.GET("/portfolio/:userId", portfolioHandler) 
 }

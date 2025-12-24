@@ -23,7 +23,7 @@ func rewardHandler(c *gin.Context) {
 			"stock":   req.StockSymbol,
 		}).WithError(err).Error("reward processing failed")
 
-		// ⚠️ Do NOT expose internal error details to client
+		
 		c.JSON(http.StatusInternalServerError, gin.H{
 			"error": "internal server error",
 		})
