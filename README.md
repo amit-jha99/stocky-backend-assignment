@@ -20,7 +20,6 @@ Ensure the following are installed on your system:
 
 git clone https://github.com/<your-username>/stocky-backend-assignment.git
 cd stocky-backend-assignment
-
 ---
 
 ## Install Dependencies
