@@ -1,19 +1,25 @@
 package main
 
-
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
+	log "github.com/sirupsen/logrus"
 )
 
 func main() {
-	godotenv.Load()
-    initDB()
+	// Logrus setup
+	log.SetFormatter(&log.JSONFormatter{})
+	log.SetLevel(log.InfoLevel)
 
-    r := gin.Default()
-    registerRoutes(r)
-  r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{"status": "ok"})
-	})
-    r.Run(":8080")
+	godotenv.Load()
+	initDB()
+
+	log.Info("starting stocky backend server")
+
+	r := gin.Default()
+	registerRoutes(r)
+
+	if err := r.Run(":8080"); err != nil {
+		log.WithError(err).Fatal("failed to start server")
+	}
 }
