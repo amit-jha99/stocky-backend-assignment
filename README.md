@@ -18,7 +18,7 @@ Ensure the following are installed on your system:
 
 ## Clone the Repository
 
-git clone https://github.com/<your-username>/stocky-backend-assignment.git
+git clone https://github.com/stocky-backend-assignment.git
 cd stocky-backend-assignment
 ---
 
