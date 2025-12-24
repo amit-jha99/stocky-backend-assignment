@@ -72,7 +72,7 @@ DB_USER=postgres
 DB_PASSWORD=your_password  
 DB_NAME=assignment  
 
-The `.env` file is excluded from version control.
+
 
 ---
 
